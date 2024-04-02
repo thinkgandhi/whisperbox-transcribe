@@ -2,7 +2,7 @@ x-broker-environment: &broker-environment
   BROKER_URL: "amqp://${RABBITMQ_DEFAULT_USER}:${RABBITMQ_DEFAULT_PASS}@rabbitmq:5672"
 
 version: "3.8"
-name: whisperbox-transcribe
+name: mystic-asr
 
 services:
   traefik:

@@ -18,9 +18,9 @@ DatabaseSession = Annotated[Session, Depends(get_session)]
 def app_factory():
     app = FastAPI(
         description=(
-            "whisperbox-transcribe is an async HTTP wrapper for openai/whisper."
+            "mystic-asr is an async HTTP automatic audio transcriber/translator."
         ),
-        title="whisperbox-transcribe",
+        title="mystic-asr",
     )
 
     api_router = APIRouter(prefix="/api/v1")
@@ -138,7 +138,7 @@ def app_factory():
         task_queue: Annotated[TaskQueue, Depends(get_task_queue)],
     ) -> models.Job:
         """
-        Enqueue a new whisper job for processing.
+        Enqueue a new mystic-asr job for processing.
         Notes:
         * Jobs are processed one-by-one in order of creation.
         * `payload.url` needs to point directly to a media file.

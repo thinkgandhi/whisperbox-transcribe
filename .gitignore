@@ -173,3 +173,4 @@ whisperbox-transcribe.sqlite*
 # other private files
 /data
 .env.prod
+whisper
